@@ -1,0 +1,14 @@
+@forward "@hardov/css-reset/reset.scss";
+@forward "fonts";
+@forward "main";
+@forward "header";
+
+//* home
+@forward "./pages/home/sections/intro";
+@forward "./pages/home/sections/products";
+@forward "./pages/home/sections/steps";
+@forward "./pages/home/sections/example";
+
+//* footer
+@forward "./footer";
+@forward "./footer/map";

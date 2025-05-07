@@ -1,0 +1,64 @@
+@use "colors";
+
+.footer {
+	background-color: colors.$basicGray;
+	padding-bottom: 60px;
+
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		max-width: 128px;
+		width: 100%;
+		aspect-ratio: 128 / 24;
+	}
+
+	&__social-list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 25px;
+	}
+
+	&__social-icon {
+		a > svg {
+			height: 23px;
+			width: 23px;
+			fill: colors.$specialDarkGray;
+			transition: all 0.1s ease-out;
+
+			&:hover {
+				fill: colors.$basicBlack;
+			}
+		}
+
+		&:first-child {
+			a > svg {
+				width: 30px;
+				height: 22px;
+			}
+		}
+
+		&:last-child {
+			a > svg {
+				width: 28px;
+				height: 28px;
+				fill: none;
+				stroke: colors.$specialDarkGray;
+				stroke-width: 1.5px;
+
+				&:hover {
+					stroke: colors.$basicBlack;
+				}
+			}
+		}
+	}
+
+	&__html-logo {
+		max-width: 163px;
+		width: 100%;
+		aspect-ratio: 163 / 34;
+	}
+}

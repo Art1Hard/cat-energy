@@ -1,0 +1,36 @@
+@use "colors";
+
+html {
+	scrollbar-color: colors.$basicGreen colors.$basicWhite; /* thumb, track */
+
+	&::-webkit-scrollbar-thumb {
+		background-color: colors.$basicGreen;
+		border-radius: 6px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: colors.$basicWhite;
+	}
+}
+
+body {
+	font-family: Oswald;
+	background-color: colors.$basicWhite;
+	color: colors.$basicBlack;
+}
+
+::selection {
+	background: colors.$basicGreen;
+	color: colors.$basicWhite;
+}
+
+.container {
+	max-width: 1284px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.title {
+	font-size: 60px;
+	line-height: 100%;
+}

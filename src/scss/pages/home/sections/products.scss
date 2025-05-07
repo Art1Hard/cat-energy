@@ -1,0 +1,89 @@
+@use "colors";
+
+.products {
+	margin-bottom: 75px;
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		column-gap: 30px;
+	}
+
+	&__item {
+		background-color: colors.$basicGray;
+		width: 100%;
+		max-width: 570px;
+		padding: 40px 50px 55px;
+	}
+
+	&__header {
+		display: flex;
+		column-gap: 60px;
+		align-items: center;
+		margin-bottom: 45px;
+	}
+
+	&__icon-cover {
+		position: relative;
+		width: 100px;
+		height: 100px;
+		background-color: colors.$basicGreen;
+		border-radius: 50%;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 43%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		fill: currentColor;
+		width: 70px;
+		aspect-ratio: 70 / 97;
+
+		max-width: none;
+
+		&--pro {
+			top: 47%;
+			width: 134px;
+			aspect-ratio: 134 / 56;
+		}
+	}
+
+	&__title {
+		font-size: 36px;
+		line-height: 100%;
+		text-transform: uppercase;
+	}
+
+	&__body {
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 16px;
+		line-height: 150%;
+		margin-bottom: 25px;
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		column-gap: 30px;
+
+		color: currentColor;
+		font-size: 20px;
+		text-transform: uppercase;
+		filter: invert(0);
+		transition: filter 0.1s ease-out;
+
+		&:hover {
+			filter: invert(25%);
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			width: 24px;
+			aspect-ratio: 24 / 12;
+			background-image: url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cline y1='6' x2='18' y2='6' stroke='black' stroke-width='2'/%3E%3Cpath d='M24 6L17.25 11.1962L17.25 0.803848L24 6Z' fill='black'/%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+		}
+	}
+}

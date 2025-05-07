@@ -1,0 +1,37 @@
+@charset "UTF-8";
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0); /* прозрачный */
+  z-index: 100;
+  width: 100%;
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 53px;
+  padding-bottom: 15px;
+}
+.header__logo {
+  max-width: 202px;
+  aspect-ratio: 202/59;
+}
+.header__list {
+  display: flex;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+}
+.header__list-item {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+.header__list-link {
+  color: #ffffff;
+}
+.header__list-link--active {
+  text-decoration-line: underline !important;
+  text-underline-offset: 11px;
+  text-decoration-thickness: 2px !important;
+}/*# sourceMappingURL=header.css.map */

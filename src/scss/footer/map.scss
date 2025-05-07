@@ -1,0 +1,72 @@
+@use "colors";
+
+.map {
+	position: relative;
+	margin-bottom: 60px;
+
+	&__ymap {
+		height: 400px;
+
+		&:hover {
+			.ymaps3x0--map-copyrights {
+				pointer-events: all;
+				opacity: 1;
+			}
+		}
+
+		.ymaps3x0--map-copyrights {
+			pointer-events: none;
+			opacity: 0;
+			transition: opacity 0.2s ease-out;
+		}
+	}
+
+	&__container {
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1;
+	}
+
+	&__contacts {
+		pointer-events: all;
+		display: inline-flex;
+		align-items: center;
+		column-gap: 85px;
+		background-color: colors.$basicWhite;
+		padding: 60px 90px 60px 75px;
+	}
+
+	&__title {
+		width: 165px;
+		font-size: 20px;
+		line-height: 105%;
+		text-transform: uppercase;
+	}
+
+	&__address {
+		font-family: Arial, Helvetica, sans-serif;
+		color: colors.$specialDarkGray;
+		font-size: 16px;
+		line-height: 125%;
+
+		&:first-child {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__marker {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		transform: translate(-50%, -100%);
+
+		width: 113px;
+		max-width: none;
+		aspect-ratio: 113 / 106;
+	}
+}
