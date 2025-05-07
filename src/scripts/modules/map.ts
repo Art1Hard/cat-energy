@@ -47,5 +47,5 @@ export async function initMap(): Promise<void> {
 
 	// Добавьте произвольную HTML-разметку внутрь содержимого маркера
 	content.innerHTML =
-		"<img class='map__marker' src='../img/map-pin.png' alt='marker'>";
+		"<img class='map__marker' src='img/map-pin.png' alt='marker'>";
 }
